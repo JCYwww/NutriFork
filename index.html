@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NutriFork - 歡迎</title>
-  <link rel="shortcut icon" href="/logo_icon.png" type="image/x-icon">
+  <title>NutriFork</title>
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
   <style>
     * {
       box-sizing: border-box;
@@ -19,7 +19,7 @@
       height: 100%;
       background-color: black;
       overflow: hidden;
-      cursor: url('./Fork.png'), auto;
+      cursor: url('./首頁/Fork.png'), auto;
     }
 
     #logo-screen {
@@ -32,7 +32,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: url('./Fork.png'), auto;
+      cursor: url('./首頁/Fork.png'), auto;
     }
 
     .center-container {
@@ -86,14 +86,14 @@
       background-color: rgba(255, 255, 255, 0.18);
       border: 2px solid rgba(255, 255, 255, 0.7);
       border-radius: 999px;
-      cursor: url('./Fork.png'), auto;
+      cursor: url('./首頁/Fork.png'), auto;
       transition: background-color 0.25s ease, transform 0.2s ease;
     }
 
     #skip-btn:hover {
       background-color: rgba(255, 255, 255, 0.35);
       transform: scale(1.05);
-      cursor: url('./Fork1.png'), auto;
+      cursor: url('./首頁/Fork1.png'), auto;
     }
   </style>
 </head>
@@ -101,11 +101,11 @@
 <body>
   <div id="logo-screen">
     <button id="skip-btn" type="button">Skip</button>
-    <audio id="logo-sound" src="./開頭音樂.mp4"></audio>
+    <audio id="logo-sound" src="./首頁/開頭音樂.mp4"></audio>
 
     <div class="center-container">
-      <video id="logo-video" src="./logo-animation.MOV" autoplay muted playsinline></video>
-      <img id="logo-animation" src="./logo.png" alt="LOGO">
+      <video id="logo-video" src="./首頁/logo-animation.MOV" autoplay muted playsinline></video>
+      <img id="logo-animation" src="./首頁/logo.png" alt="LOGO">
     </div>
   </div>
 
@@ -134,7 +134,7 @@
         sound.currentTime = 0;
       }
 
-      window.location.href = "./首頁.html";
+      window.location.href = "./首頁/首頁.html";
     }
 
     window.addEventListener("load", () => {
