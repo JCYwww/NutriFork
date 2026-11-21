@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriFork - 歡迎</title>
+  <link rel="shortcut icon" href="/logo_icon.png" type="image/x-icon">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      overflow: hidden;
+      cursor: url('./Fork.png'), auto;
+    }
+
+    #logo-screen {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: url('./Fork.png'), auto;
+    }
+
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    #logo-video {
+      width: 100%;
+      max-height: 100vh;
+    }
+
+    #logo-animation {
+      width: 250px;
+      height: auto;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .animate {
+      animation: fadeZoom 3s ease-in-out forwards;
+    }
+
+    @keyframes fadeZoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+    }
+
+    #skip-btn {
+      position: fixed;
+      top: 24px;
+      right: 30px;
+      z-index: 10000;
+      padding: 10px 22px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.18);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      border-radius: 999px;
+      cursor: url('./Fork.png'), auto;
+      transition: background-color 0.25s ease, transform 0.2s ease;
+    }
+
+    #skip-btn:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+      transform: scale(1.05);
+      cursor: url('./Fork1.png'), auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="logo-screen">
+    <button id="skip-btn" type="button">Skip</button>
+    <audio id="logo-sound" src="./開頭音樂.mp4"></audio>
+
+    <div class="center-container">
+      <video id="logo-video" src="./logo-animation.MOV" autoplay muted playsinline></video>
+      <img id="logo-animation" src="./logo.png" alt="LOGO">
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById("logo-video");
+    const logoImg = document.getElementById("logo-animation");
+    const logoScreen = document.getElementById("logo-screen");
+    const sound = document.getElementById("logo-sound");
+    const skipBtn = document.getElementById("skip-btn");
+
+    let logoTimer = null;
+    let isLeaving = false;
+
+    function goToHomePage() {
+      if (isLeaving) return;
+      isLeaving = true;
+
+      if (logoTimer) {
+        clearTimeout(logoTimer);
+      }
+      if (video) {
+        video.pause();
+      }
+      if (sound) {
+        sound.pause();
+        sound.currentTime = 0;
+      }
+
+      window.location.href = "./首頁.html";
+    }
+
+    window.addEventListener("load", () => {
+      sound.play().catch(() => {});
+    });
+
+    // 只有按下 Skip 按鈕才跳轉
+    skipBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      goToHomePage();
+    });
+
+    video.addEventListener("ended", () => {
+      if (isLeaving) return;
+      video.style.display = "none";
+      logoImg.style.opacity = 1;
+      logoImg.classList.add("animate");
+
+      logoTimer = setTimeout(() => {
+        if (isLeaving) return;
+        logoScreen.style.transition = "opacity 1s ease";
+        logoScreen.style.opacity = 0;
+
+        logoTimer = setTimeout(() => {
+          goToHomePage();
+        }, 1000);
+      }, 3000);
+    });
+  </script>
+</body>
+
+</html>

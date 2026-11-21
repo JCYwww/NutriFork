@@ -1,0 +1,330 @@
+* {
+      box-sizing: border-box;
+      cursor: url('./Fork.png'), auto;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #fff7f0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .spin-layout{
+      position: relative;
+      top: 50px;
+    }
+
+    .logo img {
+      margin: 15px;
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      left: 7px;
+      top: 5px;
+      cursor: url('./Fork1.png'), auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+    transform: scale(1.1);
+    cursor: url('./Fork1.png'), auto;
+}
+
+    .img-navbar {
+      position: relative;
+      top: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto 10%;
+    }
+
+    .img-navbar img {
+      margin: 0;
+      width: 160px;
+      height: auto;
+      transition: transform 0.5s ease, filter 0.5s ease;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 30%;
+      cursor: url('./Fork1.png'), auto;
+    }
+
+    .img-navbar img:hover {
+      transform: scale(1.1);
+      filter: brightness(1.1);
+      filter: drop-shadow(8px 8px 10px gray);
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+
+    .full-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    .dialogue-box {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 1000px;
+      margin-bottom: 30px;
+      align-items: center;
+    }
+
+    .character-block {
+      display: flex;
+      align-items: center;
+    }
+
+    .character img {
+      width: 180px;
+      height: auto;
+    }
+
+    .speech-bubble {
+      background: #fff;
+      padding: 16px 20px;
+      border-radius: 15px;
+      position: relative;
+      font-size: 18px;
+      color: #333;
+      margin: 0 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      max-width: 250px;
+      word-break: break-word;
+      font-family: "Stick", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .speech-left::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-right-color: #fff;
+    }
+
+    .speech-right::before {
+      content: "";
+      position: absolute;
+      right: -10px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-left-color: #fff;
+    }
+
+    canvas {
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      background: #fffaf2;
+      max-width: 90vw;
+      height: auto;
+    }
+
+    #spinBtn {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: "Stick", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    #spinBtn:hover {
+      background-color: #ff8ca8;
+      cursor: url('./Fork1.png'), auto;
+    }
+
+    #result {
+      margin-top: 10px;
+      font-size: 22px;
+      color: #d14b4b;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .dialogue-box {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .character-block {
+        flex-direction: column;
+      }
+
+      .speech-bubble {
+        max-width: 90%;
+        margin-top: 10px;
+      }
+
+      .character img {
+        width: 140px;
+      }
+
+      .img-navbar {
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+      }
+
+      .img-navbar img {
+        width: 40px;
+      }
+
+      .logo {
+        top: 10px;
+        left: 10px;
+      }
+
+      .logo img {
+        width: 80px;
+      }
+
+      .spin-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .character-side {
+        max-width: 90%;
+      }
+
+      .side-character {
+        width: 140px;
+      }
+
+      .speech-bubble {
+        max-width: 90%;
+      }
+    }
+
+    .wheel-and-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .wheel-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .button-and-result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    canvas {
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      background: #fffaf2;
+      width: 500px;
+      height: 500px;
+    }
+
+    .pointer {
+      width: 0;
+      height: 0;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 30px solid #333;
+    }
+
+
+    #spinBtn {
+      position: absolute;
+      top: 320px;
+      left: 530px;
+      padding: 16px 28px;
+      font-size: 20px;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #spinBtn:hover {
+      background-color: #ff8ca8;
+    }
+
+    .button-and-result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    #result {
+
+      font-size: 30px;
+      color: #d14b4b;
+      font-weight: bold;
+      margin-top: 8px;
+      font-family: "Stick", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      position: absolute;
+      top: -100px;
+      left: 100px;
+    }
+
+    .spin-layout {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10%;
+      margin-top: 50px;
+      font-family: "Stick", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .character-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .side-character {
+      width: 150%;
+      height: auto;
+      margin-top: -15%;
+    }
+
+    .speech-left,
+    .speech-right {
+      width: 150%;
+      font-size: 18px;
+      margin-top: -15%;
+    }

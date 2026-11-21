@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  cursor: url('./Fork.png'), auto;
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  background: #fff7f0;
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+  overflow-y: auto;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* 主要內容 */
+.food {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  pointer-events: none;
+  transition: top 0.05s ease-in;
+}
+
+.logo img {
+  margin: 15px;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  left: 7px;
+  top: 5px;
+  z-index: 999;
+  cursor: url('./Fork1.png'), auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  cursor: url('./Fork1.png'), auto;
+}
+
+.img-navbar {
+  position: relative;
+  top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 10%;
+}
+
+.img-navbar img {
+  margin: 0;
+  width: 160px;
+  height: auto;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  cursor: url('./Fork1.png'), auto;
+  padding: 15px;
+  border-radius: 30%;
+}
+
+.img-navbar img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  filter: drop-shadow(8px 8px 10px gray);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  margin: 5% auto;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.article {
+  position: relative;
+  top: 35px;
+  width: 100%;
+  height: 620px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  gap: 5%;
+  margin-bottom: 15px;
+}
+
+.photo {
+  margin-top: 7%;
+  width: calc(70% / 3);
+  height: 50%;
+  opacity: 0.7;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.7s ease-in-out;
+  margin-bottom: 7%;
+}
+
+.photo:hover {
+  width: 30%;
+  height: 60%;
+  filter: brightness(1.2);
+  filter: drop-shadow(8px 8px 10px gray);
+  cursor: url('./Fork1.png'), auto;
+}
+
+.photo:nth-child(1) {
+  background-image: url(./番茄\ .png);
+}
+
+.photo:nth-child(2) {
+  background-image: url(./青椒.png);
+}
+
+.photo:nth-child(3) {
+  background-image: url(./胡蘿蔔.png);
+}
+
+.item {
+  position: absolute;
+  top: 3%;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-size: 100%;
+  cursor: url('./Fork1.png'), auto;
+}
+
+.item1 {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.7s;
+  background-color: #fff7f0;
+  cursor: url('./Fork1.png'), auto;
+}
+
+footer {
+  width: 100%;
+  height: 20%;
+  flex-direction: column;
+  background-color: rgb(205, 205, 205);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 39%;
+  opacity: 80%;
+}
+
+p {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  margin: 0 auto;
+  font-family: "Stick", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dialog-box {
+  position: relative;
+  width: 500px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  color: black;
+  margin-left: 60px;
+  margin-bottom: 20px;
+  font-family: "Stick", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 遊戲、標語 */
+.container1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: 10%;
+}
+
+#quiz-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  width: 50%;
+  height: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s;
+  animation: fadeIn 1.2s ease;
+}
+
+.game-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.game-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #abe28b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.game-buttons button:hover {
+  background-color: #4e9a37;
+}
+
+
+#start-screen {
+  position: relative;
+  bottom: 45px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.question {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2d4739;
+  margin-bottom: 20px;
+}
+
+.option {
+  background-color: #f0fff2;
+  margin: 10px auto;
+  padding: 12px 18px;
+  border-radius: 12px;
+  width: 90%;
+  cursor: url('./Fork1.png'), auto;
+  transition: 0.3s;
+  font-size: 16px;
+  border: 2px solid #d0e8cf;
+}
+
+.option:hover {
+  background-color: #b8f2c9;
+  transform: scale(1.02);
+}
+
+#score {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #4d704e;
+  font-size: 18px;
+}
+
+.feedback {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #317865;
+  min-height: 24px;
+}
+
+.correct-answer {
+  color: #555;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.character-img {
+  width: 200px;
+  /* height: 200px; */
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+#restart-btn,
+#start-btn,
+#back-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  color: rgb(56, 56, 56);
+  border-radius: 8px;
+  cursor: url('./Fork1.png'), auto;
+  border-radius: 50%;
+}
+
+#restart-btn:hover,
+#start-btn:hover,
+#back-btn:hover {
+  background-color: #cdcdcd;
+  filter: brightness(1.2);
+  box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.3);
+}
+
+#quiz-container.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .img-navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .photo {
+    width: 90%;
+    height: 30%;
+  }
+}
+
+#food-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.food {
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  max-width: 150px;
+  max-height: 150px;
+  pointer-events: none;
+  transition: top 0.05s ease-in;
+}

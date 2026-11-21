@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: url('./Fork.png'), auto;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff7f0;
+}
+
+.logo img{
+  margin: 15px;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  left: 7px;
+  top: 5px;
+  cursor: url('./Fork1.png'), auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  cursor: url('./Fork1.png'), auto;
+}
+
+.rocket {
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  width: 300px;
+  z-index: 1000;
+  animation: flyAcross 3s ease-in-out forwards;
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(90vw, -30px) rotate(45deg);
+  }
+}
+
+.food {
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: opacity 0.5s ease, transform 0.8s cubic-bezier(0.25, 1.5, 0.5, 1);
+  position: absolute;
+  height: auto;
+}
+
+.main-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 30px;
+}
+
+/* 左邊：餐點介紹 */
+.meal-info {
+  position: relative;
+  left: 12%;
+  width: 30%;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  background-color: #fffdf4;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: "Stick", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 價格特別標示 */
+.meal-info .price {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 10px;
+  font-family: "Stick", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.plate-container {
+  position: relative;
+  top: -40px;
+  width: 600px;
+  height: 600px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plate {
+  width: 700px;
+  position: relative;
+  top: 5%;
+}
+
+.food {
+  position: absolute;
+  height: auto;
+  cursor: pointer;
+}
+
+.food img {
+  width: 250px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  cursor: url('./Fork1.png'), auto;
+  /* background-color: rgb(131, 141, 171); */
+}
+
+.fish {
+  top: 80px;
+  left: 20px;
+}
+
+.toast {
+  top: 60px;
+  right: 50px;
+}
+
+.orange {
+  bottom: 10px;
+  right: 30px;
+}
+
+.pumpkin {
+  bottom: 0px;
+  left: 50px;
+}
+
+/* 右邊：購物車控制 */
+.cart-controls {
+  width: 30%;
+  text-align: center;
+  font-size: 20px;
+  background-color: #fffdf4;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 數量按鈕排版 */
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.quantity button {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity input {
+  width: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.add-to-cart{
+  padding: 5px;
+  width: 150px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.info {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-family: "Stick", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.food-img:hover .info {
+  opacity: 1;
+}
+
+.food.dim {
+  opacity: 0.3;
+}
+
+.food.highlight {
+  z-index: 10;
+}

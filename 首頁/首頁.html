@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriFork</title>
+  <link rel="shortcut icon" href="/logo_icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./首頁.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Serif+JP:wght@200..900&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rampart+One&family=Stick&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 主要內容 -->
+  <div id="main-content">
+
+    <div class="logo">
+      <a href="../首頁/首頁.html">
+        <img src="../assets/logo.png" alt="">
+      </a>
+    </div>
+
+    <nav class="img-navbar">
+      <a href="../首頁/首頁.html"><img src="../assets/div_pic/首頁.png" alt="首頁"></a>
+      <a href="../菜單/菜單.html"><img src="../assets/div_pic/菜單.png" alt="菜單"></a>
+      <a href="../遊戲/遊戲.html"><img src="../assets/div_pic/表單.png" alt="表單"></a>
+      <a href="../生產履歷/生產履歷.html"><img src="../assets/div_pic/生產履歷.png" alt="生產履歷"></a>
+      <a href="../人員介紹/人員介紹.html"><img src="../assets/div_pic/人員介紹.png" alt="人員介紹"></a>
+    </nav>
+
+    <div class="container">
+      <div class="article">
+        <div class="main">
+          <div class="photo tomato"></div>
+          <div class="photo pepper"></div>
+          <div class="photo carrot"></div>
+          <div class="item">
+            <div class="item1"></div>
+          </div>
+        </div>
+
+        <!-- 遊戲、標語 -->
+        <div class="container1">
+
+          <div id="start-screen">
+            <button id="start-btn" onclick="startGame()">
+              <img src="./小遊戲按鈕.png" alt="">
+            </button>
+          </div>
+
+          <div id="quiz-container" class="hidden">
+            <img class="character-img" src="./花椰菜角色1.png" alt="角色">
+            <div class="question" id="question">載入中...</div>
+            <div id="options"></div>
+            <div class="feedback" id="feedback"></div>
+            <div class="correct-answer" id="correct-answer"></div>
+            <div id="score">目前得分：0</div>
+
+            <div class="game-buttons">
+              <button id="restart-btn">重玩遊戲</button>
+              <button id="back-btn">返回</button>
+            </div>
+          </div>
+
+          <div class="dialog-box">
+            <div class="arrow-left"></div>
+            <p>
+              吃得健康，也能很療癒！<br>
+              我們相信，健康不需要嚴肅刻板，也可以充滿溫度與趣味。<br>
+              每一道餐點都使用天然好食材，注重營養、安心、好吃三大原則，讓忙碌的你，也能輕鬆享受真正對身體好的食物。<br>
+              在這裡，讓我們一起——吃得簡單、吃得安心、吃得開心！
+            </p>
+          </div>
+
+          <footer id="footer">
+            <p>&copy; NUTRIFORK | 聯絡我們：NUTRIFORK@gmail.com</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <div id="food-container"></div>
+
+    <script src="./首頁.js"></script>
+  </div>
+</body>
+
+</html>

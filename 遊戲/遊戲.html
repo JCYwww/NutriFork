@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <title>角色對話轉盤</title>
+  <link rel="shortcut icon" href="/logo_icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./遊戲.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Serif+JP:wght@200..900&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rampart+One&family=Stick&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="logo">
+      <a href="../首頁/首頁.html">
+        <img src="../assets/logo.png" alt="">
+      </a>
+    </div>
+
+    <nav class="img-navbar">
+      <a href="../首頁/首頁.html"><img src="../assets/div_pic/首頁.png" alt="首頁"></a>
+      <a href="../菜單/菜單.html"><img src="../assets/div_pic/菜單.png" alt="菜單"></a>
+      <a href="../遊戲/遊戲.html"><img src="../assets/div_pic/表單.png" alt="表單"></a>
+      <a href="../生產履歷/生產履歷.html"><img src="../assets/div_pic/生產履歷.png" alt="生產履歷"></a>
+      <a href="../人員介紹/人員介紹.html"><img src="../assets/div_pic/人員介紹.png" alt="人員介紹"></a>
+    </nav>
+
+
+  <div class="full-container">
+
+    <div class="spin-layout">
+      <!-- 左角色 -->
+      <div class="character-side">
+        <img src="./花椰菜角色1.png" alt="角色A" class="side-character">
+        <div class="speech-bubble speech-left" id="speechA">「今天不知道要吃什麼」</div>
+      </div>
+
+      <!-- 中間：按鈕 + 轉盤 -->
+      <div class="wheel-container">
+        <div class="button-and-result">
+          <button id="spinBtn">開始轉盤</button>
+        </div>
+        <div class="pointer"></div>
+        <canvas id="wheel" width="500" height="500"></canvas>
+        <div id="result"></div>
+      </div>
+
+      <!-- 右角色 -->
+      <div class="character-side">
+        <img src="./花椰菜角色2.png" alt="角色B" class="side-character">
+        <div class="speech-bubble speech-right" id="speechB">「那來轉轉盤吧」</div>
+      </div>
+    </div>
+
+
+
+    <script src="遊戲.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: url('./Fork.png'), auto;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    background: #fff7f0;
+}
+
+.garden {
+      width: 100%;
+      height: 13%;
+      background-image: url('garden.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      cursor: url('./Fork1.png'), auto;
+    }
+
+    .fruit {
+      width: 80px;
+      height: 130px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: -150px; /* 一開始藏起來 */
+      transition: bottom 0.5s ease;
+    }
+
+    .tomato {
+      background-image: url('p.png');
+      left: 40px;
+    }
+
+    .corner {
+      background-image: url('pp.png');
+      left: 180px;
+    }
+
+    .correct {
+      background-image: url('ppp.png');
+      left: 110px;
+    }
+
+    .garden:hover .fruit {
+      bottom: 0; 
+      cursor: url('./Fork1.png'), auto;
+    }
+
+.logo img{
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    position: fixed;
+    left: 7px;
+    top: 5px;
+    cursor: url('./Fork1.png'), auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    cursor: url('./Fork1.png'), auto;
+}
+
+.img-navbar {
+    position: relative;
+    top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 10%;
+  }
+  
+.img-navbar img {
+    margin: 0;
+    width: 160px; 
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30%;
+    transform: none;
+    cursor: url('./Fork1.png'), auto;
+  }
+  
+.img-navbar img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+    filter: drop-shadow(8px 8px 10px gray);
+    cursor: url('./Fork1.png'), auto;
+  }
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* 頁首和頁尾樣式 */
+header, footer {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 3%;
+}
+
+/* 容器 */
+.container {
+  margin: 0 auto;
+  padding: 6rem;
+  max-width: 1600px;
+}
+
+/* 商品格子排列 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  margin-top: 2rem;
+  padding: 0 10px;
+}
+
+/* 商品卡片 */
+.product {
+  width: 100%;
+  max-width: 280px;
+  background-color: white;
+  padding: 0;
+  text-align: center;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  border-radius: 20px;
+  cursor: url('./Fork1.png'), auto;
+}
+
+/* 商品圖片 */
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  cursor: url('./Fork1.png'), auto;
+}
+
+/* 商品名稱和描述 */
+.product h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.product p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* 翻轉卡片效果 */
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 380px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+/* 翻轉狀態 */
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* 卡片正面與背面 */
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card-front {
+    background-color: white;
+    text-align: center;
+}
+
+.card-back {
+    background-color: #ffe5cc;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+/* 商品圖片 */
+.card-front img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+/* 商品名稱和描述 */
+.card-face h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.card-face p {
+    color: #555;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.slideshow-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 250px;
+    margin: 100px auto 0;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(54, 43, 43);
+}
+
+p,h3{
+  font-size: 120%;
+  font-family: "Stick", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

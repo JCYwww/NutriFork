@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="生產履歷.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Serif+JP:wght@200..900&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rampart+One&family=Stick&display=swap"
+    rel="stylesheet">
+  <script src="生產履歷.js" defer></script>
+  <title>小商店</title>
+  <link rel="shortcut icon" href="/logo_icon.png" type="image/x-icon" >
+</head>
+
+<body>
+  <div class="logo">
+      <a href="../首頁/首頁.html">
+        <img src="../assets/logo.png" alt="">
+      </a>
+    </div>
+
+    <nav class="img-navbar">
+      <a href="../首頁/首頁.html"><img src="../assets/div_pic/首頁.png" alt="首頁"></a>
+      <a href="../菜單/菜單.html"><img src="../assets/div_pic/菜單.png" alt="菜單"></a>
+      <a href="../遊戲/遊戲.html"><img src="../assets/div_pic/表單.png" alt="表單"></a>
+      <a href="../生產履歷/生產履歷.html"><img src="../assets/div_pic/生產履歷.png" alt="生產履歷"></a>
+      <a href="../人員介紹/人員介紹.html"><img src="../assets/div_pic/人員介紹.png" alt="人員介紹"></a>
+    </nav>
+
+ <div class="container">
+  <div class="product-grid">
+
+    <!-- 商品 1：香蕉 -->
+    <div class="product" data-product-name="香蕉">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./香蕉.png" alt="香蕉" loading="lazy">
+          <h3>香蕉</h3>
+          <p>屏東九如產地直送，友善耕作、香甜柔軟。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>香蕉</h3>
+          <p>
+            🍌 種植地：屏東九如鄉<br>
+            🌿 無農藥友善農法<br>
+            ✅ 通過產銷履歷認證<br>
+            💡 小知識：熟透時冷藏風味更佳！
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 2：紫米飯 -->
+    <div class="product" data-product-name="紫米飯">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./紫米飯.jpg" alt="紫米飯" loading="lazy">
+          <h3>紫米飯</h3>
+          <p>花蓮原生種紫米，富含花青素與口感彈性。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>紫米飯</h3>
+          <p>
+            🌾 產地：花蓮壽豐<br>
+            🌈 富含花青素、膳食纖維<br>
+            ✅ 在地契作小農合作<br>
+            💡 小知識：搭配南瓜最對味！
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 3：鮭魚 -->
+    <div class="product" data-product-name="鮭魚">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./鮭魚.png" alt="鮭魚" loading="lazy">
+          <h3>鮭魚</h3>
+          <p>挪威冷水養殖，油脂豐富，鮮嫩無腥味。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>鮭魚</h3>
+          <p>
+            🐟 原產地：挪威峽灣<br>
+            🧊 冷鏈運輸保鮮<br>
+            ✅ 無抗生素殘留
+            💡 建議料理：舒肥、香煎
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 4：滷豆腐 -->
+    <div class="product" data-product-name="滷豆腐">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./豆腐.png" alt="豆腐" loading="lazy">
+          <h3>滷豆腐</h3>
+          <p>傳統黃豆製作，古早味滷汁入味香濃。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>滷豆腐</h3>
+          <p>
+            🌱 非基改黃豆製成<br>
+            🧄 滷汁每日熬煮<br>
+            ✅ 無添加防腐劑<br>
+            💡 建議：熱飯配一塊剛剛好！
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 5：太陽蛋 -->
+    <div class="product" data-product-name="太陽蛋">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./雞蛋.png" alt="太陽蛋" loading="lazy">
+          <h3>太陽蛋</h3>
+          <p>來自初鹿放牧雞場，蛋黃金黃飽滿。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>太陽蛋</h3>
+          <p>
+            🐔 放牧雞場自然飼養<br>
+            🧡 蛋黃濃郁不腥<br>
+            ✅ 通過 SGS 無藥物殘留檢驗<br>
+            💡 搭配紫米飯絕配！
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 6：沙拉 -->
+    <div class="product" data-product-name="沙拉">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./沙拉.png" alt="沙拉" loading="lazy">
+          <h3>沙拉</h3>
+          <p>每日現切蔬菜，清爽脆口無負擔。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>沙拉</h3>
+          <p>
+            🥗 材料：高麗菜、胡蘿蔔、紫甘藍<br>
+            ❄️ 當日處理冷藏保鮮<br>
+            ✅ 產地可追溯
+            💡 建議：搭配胡麻醬風味升級
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 7：地瓜葉 -->
+    <div class="product" data-product-name="地瓜葉">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./地瓜葉.png" alt="地瓜葉" loading="lazy">
+          <h3>地瓜葉</h3>
+          <p>苗栗銅鑼自然栽培，富含膳食纖維。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>地瓜葉</h3>
+          <p>
+            🧑‍🌾 產地：苗栗銅鑼<br>
+            🌿 無農藥管理
+            ✅ 小農合作耕種<br>
+            💡 建議：蒜炒加點鹽最簡單
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 8：甜椒 -->
+    <div class="product" data-product-name="甜椒">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./青椒.png" alt="甜椒" loading="lazy">
+          <h3>甜椒</h3>
+          <p>屏東溫室培育，色澤鮮豔、甜脆可口。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>甜椒</h3>
+          <p>
+            🌶️ 溫室種植無蟲害
+            🌈 富含維他命 C
+            ✅ SGS 檢驗合格<br>
+            💡 生食也沒問題！
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 9：牛排 -->
+    <div class="product" data-product-name="牛排">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./牛排.png" alt="牛排" loading="lazy">
+          <h3>牛排</h3>
+          <p>美國 Choice 等級牛肉，軟嫩多汁。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>牛排</h3>
+          <p>
+            🥩 產地：美國
+            🧊 低溫熟成處理
+            ✅ 來源可追溯<br>
+            💡 建議：香煎3分鐘剛剛好
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 10：酪梨 -->
+    <div class="product" data-product-name="酪梨">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./酪梨.png" alt="酪梨" loading="lazy">
+          <h3>酪梨</h3>
+          <p>台南玉井酪梨，香濃綿密、好油脂來源。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>酪梨</h3>
+          <p>
+            🥑 產地：台南玉井
+            💧 自然熟成採收
+            ✅ 富含不飽和脂肪酸<br>
+            💡 可打成奶昔或切片拌飯
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 11：花椰菜 -->
+    <div class="product" data-product-name="花椰菜">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./花椰菜.png" alt="花椰菜" loading="lazy">
+          <h3>花椰菜</h3>
+          <p>雲林北港花椰菜，水煮、炒菜都合適。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>花椰菜</h3>
+          <p>
+            🥦 產地：雲林北港
+            🌱 每日清晨採收
+            ✅ 低農藥友善耕作<br>
+            💡 建議：燙熟後冰鎮更脆口
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 12：柳橙 -->
+    <div class="product" data-product-name="柳橙">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./柳橙.png" alt="柳橙" loading="lazy">
+          <h3>柳橙</h3>
+          <p>南投中寮香丁，果肉多汁、自然甜味。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>柳橙</h3>
+          <p>
+            🍊 種植地：南投中寮
+            🌿 無蠟果皮可直接榨汁
+            ✅ 產地直送<br>
+            💡 每天一顆，維 C 滿滿！
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 13：地瓜 -->
+    <div class="product" data-product-name="地瓜">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./地瓜.png" alt="地瓜" loading="lazy">
+          <h3>地瓜</h3>
+          <p>台南白河紅地瓜，口感鬆軟、香甜好吃。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>地瓜</h3>
+          <p>
+            🍠 產地：台南白河
+            🔥 傳統柴燒蒸煮
+            ✅ 在地契作農戶供應<br>
+            💡 冷熱皆宜，小朋友最愛！
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 14：蘋果 -->
+    <div class="product" data-product-name="蘋果">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./蘋果.png" alt="蘋果" loading="lazy">
+          <h3>蘋果</h3>
+          <p>日本青森富士蘋果，酸甜平衡、清脆爽口。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>蘋果</h3>
+          <p>
+            🍎 品種：富士蘋果
+            🇯🇵 原產地：日本青森
+            ✅ SGS 無農藥殘留證明<br>
+            💡 可直接食用或切丁加優格
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 15：南瓜 -->
+    <div class="product" data-product-name="南瓜">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./南瓜.png" alt="南瓜" loading="lazy">
+          <h3>南瓜</h3>
+          <p>台中大雅產地直送，甜糯綿密營養高。</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>南瓜</h3>
+          <p>
+            🎃 種植地：台中大雅
+            🍯 富含β-胡蘿蔔素
+            ✅ 可追溯安心履歷<br>
+            💡 建議做成濃湯或蒸泥餵寶寶
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="garden">
+    <div class="fruit tomato"></div>
+    <div class="fruit correct"></div>
+    <div class="fruit corner"></div>
+  </div>
+
+
+  <footer id="footer">
+    <p>&copy; NUTRIFORK | 聯絡我們：NUTRIFORK@gmail.com</p>
+  </footer>
+</body>
+</html>
